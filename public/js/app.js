@@ -1,4 +1,4 @@
-const api = "http://localhost:3000/weather?adress=";
+const api = "/weather?adress=";
 
 const get_weather = async (query) => {
   return fetch(api + encodeURIComponent(query))

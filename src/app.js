@@ -6,6 +6,7 @@ const get_weather = require("../utils/weather");
 require('../helpers/handlebars');
 
 const app = express();
+const port = process.env.PORT || 3000;
 const public_dir = path.join(__dirname, '../public');
 
 // set views path (default = views)
@@ -81,6 +82,6 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log(`Server started on localhost:3000`);
+app.listen(port, () => {
+  console.log(`Server started on ${port}!`);
 });
