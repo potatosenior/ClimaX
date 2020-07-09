@@ -1,0 +1,33 @@
+<header>
+  <nav>
+    <div class="flex" style="justify-content: space-around; width: 100%;">
+      <h1 style="width: 50%; text-decoration:underline; text-decoration-color: #0583F2" >
+        Clima
+        <span style="color: #0583F2; text-decoration:underline; text-decoration-color: #121212">X</span>
+      </h1>
+      <div class="flex" style="width: 50%; align-items: center">
+        {{#ifEquals this.active "index"}}
+         <a style="color: white;" href="/" >
+        {{else}}
+          <a href="/" >
+        {{/ifEquals}}
+          Inicio
+        </a>
+        {{#ifEquals this.active "about"}}
+         <a style="color: white;" href="/about" >
+        {{else}}
+          <a href="/about" >
+        {{/ifEquals}}
+          Sobre
+        </a>
+        {{#ifEquals this.active "help"}}
+         <a style="color: white;" href="/help" >
+        {{else}}
+          <a href="/help" >
+        {{/ifEquals}}
+          Ajuda
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+  <link rel="icon" href="./img/icon.svg" >
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Inicio</title>
+</head>
+<body>
+  <div class="main-content" >
+    {{>header}}
+    <div class="main-container flex column">
+      <p>Use este site para descobrir o clima atual de um lugar!</p>
+
+      <form>
+        <input placeholder="Ex: Rio de janeiro">
+        <button>Procurar</button>
+      </form>
+    </div>
+    <div class="flex column">
+      <h2 id="result1" >{{result1}}</h2>
+      <p id="result2" >{{result2}}</p>
+    </div>
+  </div>
+  {{>footer}}
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
