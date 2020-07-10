@@ -8,8 +8,12 @@
     "hbs": "^4.1.1",
     "node-fetch": "^2.6.0"
   },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
   "scripts": {
     "start": "node src/app.js",
-    "debug": "nodemon src/app.js"
+    "dev": "nodemon src/app.js",
+    "deploy": "echo \"Iniciando deploy!\" && git push origin master && echo \"Deployed to github!\" && git push heroku master && echo \"Deployed to heroku!\""
   }
 }
