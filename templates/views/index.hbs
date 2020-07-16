@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="/">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300&display=swap" rel="stylesheet">
   <link rel="icon" href="./img/icon.svg" >
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/style.css" />
@@ -14,20 +14,21 @@
   <div class="main-content" >
     {{>header}}
     <div class="main-container flex column">
-      <p>Use este site para descobrir o clima atual de um lugar!</p>
+      <h1>Informe um local para descobrir informações sobre seu clima!</h1>
 
-      <form>
+      <form autocomplete="on">
         <input placeholder="Ex: Rio de janeiro">
         <button>Procurar</button>
       </form>
     </div>
-    <div class="flex column">
+    <div class="flex column result">
       <h2 id="result1" >{{result1}}</h2>
       <p id="result2" >{{result2}}</p>
     </div>
+  <div class="clouds" style="background-image: url(./img/cloud.png);"></div> 
+  <div class="airplane" style="background-image: url(./img/aviao.png);"></div>
   </div>
   {{>footer}}
-
   <script src="./js/app.js"></script>
 </body>
 </html>

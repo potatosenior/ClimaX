@@ -1,9 +1,8 @@
 body {
   color: #333333;
   font-family: 'Roboto', sans-serif;
-  max-width: 80%;
+  max-width: 95%;
   margin: 0 auto;
-  padding: 0 16px;
 
   display: flex;
   flex-direction: column;
@@ -12,32 +11,44 @@ body {
 }
 
 header {
-  border-bottom: 1px solid #fff;
-  padding: 3%;
+  border-bottom: 1px solid #0583F2;
+  padding: 2%;
   color: #121212;
 }
 
 header a {
   font-size: 1.4em;
-  font-weight: 100;
+  font-weight: bold;
 }
 
 footer {
   color: #121212;
-  border-top: 1px solid #fff;
-  margin-top: 5%;
-  padding: 3%;
+  border-top: 1px solid #0583F2;
+  padding: 4%;
 }
 
-h1 {
-  font-size: 64px;
-  margin-bottom: 3%;
+footer p {
+  font-weight: 300;
 }
 
-h2 {
-  font-size: 24px;
-  margin-bottom: 3%;
-  color: #3B8FD9;
+.header__title {
+  font-size: 50px;
+  font-weight: bolder;
+  text-decoration:underline; 
+  text-decoration-color: #0583F2;
+  width: 50%;
+}
+
+.header__title span {
+  color: #0583F2; 
+  text-decoration: underline; 
+  text-decoration-color: #121212;
+
+}
+
+.header__list {
+  width: 50%; 
+  align-items: center;
 }
 
 a {
@@ -45,14 +56,24 @@ a {
   color: #230A59;
 }
 
+p {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
 input {
-  border: 1px solid #2685BF;
-  padding: 8px;
-  border-radius: 10px;
-  -webkit-box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.59);
-  -moz-box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.59);
-  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.59);
-  width: 70%;
+  border: 0px solid #2685BF;
+  padding: 15px;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: #0583F2;
+
   outline: none;
 }
 
@@ -63,19 +84,20 @@ input::placeholder {
 button {
   cursor: pointer;
   border: 0px solid #52A5D9;
-  background-color: #55E863;
-  border-radius: 10px;
+  background-color: #52A5D9;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   color: white;
-  padding: 8px;
-  -webkit-box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.59);
-  -moz-box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.59);
-  box-shadow: 4px 4px 7px 1px rgba(0,0,0,0.59);
+
   outline: none;
-  transition: scale 0.5s ease-in-out;
+  padding: 15px;
+  transition: all 0.2s;
 }
 
 button:hover {
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
+  background-color: #55E863;
+  font-weight: bolder;
 }
 
 button:active {
@@ -83,13 +105,26 @@ button:active {
 }
 
 form {
-  width: 65%;
+  width: 60%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.59);
+  -moz-box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.59);
+  box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.59);
 }
 
-#result2 {
+.result h2 {
+  font-size: 25px;
+  margin-bottom: 3%;
+  color: #0583F2;
+  font-weight: bold;
+}
+
+.result p {
+  font-size: 300;
   color: #52A5D9;
 }
 
@@ -101,7 +136,11 @@ form {
   padding: 3%;
   align-items: center;
   min-height: 100px;
-  /* justify-content: space-evenly !important; */
+}
+
+.main-container h1 {
+  margin: 3%;
+  text-align: justify;
 }
 
 .flex {
@@ -115,4 +154,58 @@ form {
 
 .column {
   flex-direction: column;
+}
+
+.clouds { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  animation: animate 60s linear infinite; 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  z-index: -2;
+} 
+.airplane {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  animation: animate2 10s linear infinite; 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  z-index: -3;
+  transform: rotateY(360deg);
+}
+
+.active {
+  color: #0583F2
+}
+
+/* ---------------------------------------------- */
+
+@media (max-width: 600px) {
+  form {
+    margin-top: 5%;
+    width: 90%;
+  }
+  .main-container h1 {
+    font-size: 25px;
+  }
+}
+
+/* ---------------------------------------------- */
+
+@keyframes animate 
+{ 
+  0% { background-position: 0px; } 
+  100% { background-position: -5440px; } 
+}
+
+@keyframes animate2
+{ 
+  0% { background-position: 4000px; } 
+  100% { background-position: -5440px; } 
 }

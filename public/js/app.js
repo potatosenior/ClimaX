@@ -17,7 +17,6 @@ const result2 = document.querySelector('#result2');
 
 form.addEventListener('submit', async (e) => {
   // impede a pagina de recarregar quando apertar o botao
-  // Caldas Novas
   e.preventDefault();
 
   if (!input.value.length) {

@@ -27,11 +27,11 @@ app.get('', (req, res) => {
   });
 });
 
-app.get('/help', (req, res) => {
+/* app.get('/help', (req, res) => {
   res.render('help', {
     active: 'help'
   });
-});
+}); */
 
 app.get('/about', (req, res) => {
   res.render('about', {
@@ -66,13 +66,6 @@ app.get('/weather', async (req, res) => {
       });
     }
   }
-});
-
-app.get('help/*', (req, res) => {
-  res.render('error', {
-    code: 404,
-    title: 'Página de ajuda não encontrada!'
-  });
 });
 
 app.get('*', (req, res) => {
