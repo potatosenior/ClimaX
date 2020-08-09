@@ -116,8 +116,15 @@ form {
   box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.59);
 }
 
+img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
 .result h2 {
   font-size: 25px;
+  margin-top: 3%;
   margin-bottom: 3%;
   color: #0583F2;
   font-weight: bold;
@@ -126,6 +133,11 @@ form {
 .result p {
   font-size: 300;
   color: #52A5D9;
+}
+
+.error {
+  color: #121212 !important;
+  font-weight: 200;
 }
 
 .main-content {
@@ -192,7 +204,13 @@ form {
     width: 90%;
   }
   .main-container h1 {
-    font-size: 25px;
+    font-size: 20px;
+  }
+  .result h2 {
+    font-size: 15px;
+  }
+  .result p {
+    font-size: small;
   }
 }
 

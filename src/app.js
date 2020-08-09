@@ -27,12 +27,6 @@ app.get('', (req, res) => {
   });
 });
 
-/* app.get('/help', (req, res) => {
-  res.render('help', {
-    active: 'help'
-  });
-}); */
-
 app.get('/about', (req, res) => {
   res.render('about', {
     active: 'about'
@@ -62,7 +56,8 @@ app.get('/weather', async (req, res) => {
         // feelslike: data.current.feelslike,
         // description: data.current.weather_descriptions,
         location: coords.location,
-        forecast
+        forecast,
+        icon: data.current.weather_icons[0]
       });
     }
   }
